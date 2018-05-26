@@ -4,7 +4,7 @@
 #include <string>
 #include "persona.h"
 
-class Alumnos{
+class Alumno{
 public:
     int getIdAlumno();
     void setIdAlumno(int idAlumno);

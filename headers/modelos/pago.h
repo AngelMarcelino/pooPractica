@@ -3,7 +3,7 @@
 
 #include <string>
 
-class Pagos{
+class Pago{
 public:
     int getIdPago();
     void setIdPago(int idAlumno);
