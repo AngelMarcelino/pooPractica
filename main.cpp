@@ -1,6 +1,7 @@
 #include <iostream>
-
+#include "./headers/logica/alumnos-logica.h"
 
 int main(){
-    std::cout << "Nada aun" << std::endl;
+    AlumnosLogica alumnosLogica = AlumnosLogica();
+    alumnosLogica.obtenerListaDeAlumnos();
 }

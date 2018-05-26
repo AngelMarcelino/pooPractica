@@ -1,7 +1,7 @@
 #ifndef ALUMNOS_L
 #define ALUMNOS_L
 
-#include "./modelos/alumno.h"
+#include "../modelos/alumno.h"
 #include <list>
 
 class AlumnosLogica {

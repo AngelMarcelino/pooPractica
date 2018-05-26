@@ -12,5 +12,5 @@ std::string Usuario::getPuesto() {
     return this->puesto;
 }
 void Usuario::setPuesto(std::string puesto) {
-    this->puesto = puesto;
+    this->puesto.assign(puesto);
 }

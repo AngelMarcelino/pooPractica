@@ -14,7 +14,7 @@ std::string Alumno::getCarrera(){
 }
 
 void Alumno::setCarrera(std::string carrera){
-    this->carrera = idCarrera;
+    this->carrera.assign(carrera);
 }
 
 int Alumno::getIdCarrera(){

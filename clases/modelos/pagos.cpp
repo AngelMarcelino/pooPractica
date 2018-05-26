@@ -25,14 +25,14 @@ std::string Pago::getFechaPago() {
     return this->fechaPago;
 }
 void Pago::setFechaPago(std::string fechaPago) {
-    this->fechaPago = fechaPago;
+    this->fechaPago.assign(fechaPago);
 }
 
 std::string Pago::getTipoPago() {
     return this->tipoPago;
 }
 void Pago::setTipoPago(std::string tipoPago) {
-    this->tipoPago = tipoPago;
+    this->tipoPago.assign(tipoPago);
 }
 
 double Pago::getMonto() {

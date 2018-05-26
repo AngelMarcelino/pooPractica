@@ -11,7 +11,7 @@ std::string Carrera::getNombreCarrera() {
     return this->nombreCarrera;
 }
 void Carrera::setNombreCarrera(std::string nombreCarrera) {
-    this->nombreCarrera = nombreCarrera;
+    this->nombreCarrera.assign(nombreCarrera);
 }
 
 int Carrera::getSemestre() {
