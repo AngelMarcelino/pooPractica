@@ -43,6 +43,7 @@ void AlumnosLogica::obtenerListaDeAlumnos() {
     for(Alumno n : this->listaAlumnos) {
         this->printData(n);
     }
+    this->updateFile();
 }
 
 void AlumnosLogica::bajaAlumno(int alumnoId) {
@@ -59,10 +60,18 @@ void AlumnosLogica::bajaAlumno(int alumnoId) {
     }
     this->updateFile();
 }
+void AlumnosLogica::updateFile() {
+    std::string data = "";
+    for(Alumno n : this->listaAlumnos) {
+        data+=n.getCarrera() + "#" +
+        std::to_string(n.getIdAlumno()) + "#" +
+        std::to_string(n.getIdCarrera()) + "\n";
+    }
+    BaseLogic::updateFile(data);
+}
 
-
-AlumnosLogica::AlumnosLogica() : BaseLogic::BaseLogic(AlumnosLogica::FILE_NAME){
-    
+AlumnosLogica::AlumnosLogica() : BaseLogic::BaseLogic(){
+    this->fileName = AlumnosLogica::FILE_NAME;
 }
 
 AlumnosLogica::~AlumnosLogica() {

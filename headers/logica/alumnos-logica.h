@@ -14,6 +14,7 @@ public:
     void obtenerListaDeAlumnos();
     void bajaAlumno(int id);
     void printData(Alumno);
+    void updateFile();
     AlumnosLogica();
     ~AlumnosLogica();
 private:
