@@ -2,6 +2,6 @@
 #include "./headers/logica/alumnos-logica.h"
 
 int main(){
-    AlumnosLogica alumnosLogica = AlumnosLogica();
+    AlumnosLogica alumnosLogica;
     alumnosLogica.obtenerListaDeAlumnos();
 }
