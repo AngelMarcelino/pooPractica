@@ -33,6 +33,8 @@
         "xstddef": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "vector": "cpp",
+        "fstream": "cpp"
     }
 }
