@@ -6,13 +6,14 @@ const std::string AlumnosLogica::FILE_NAME = "alumnos.txt";
 
 void AlumnosLogica::agregarAlumno(Alumno alumno) {
     alumno.setIdAlumno(this->listaAlumnos.size() + 1);
-    this->listaAlumnos.push_front(alumno);
+    this->listaAlumnos.push_back(alumno);
     this->updateFile();
 }
 
 void AlumnosLogica::printData(Alumno alumno) {
     std::cout << "Id: " << alumno.getIdAlumno() <<
-        "\tCarrera: " << alumno.getCarrera();
+        "\tCarrera: " << alumno.getCarrera() << 
+        "\tId Carrera: " << alumno.getIdCarrera();
 }
 
 void AlumnosLogica::buscarAlumno(int alumnoId) {
@@ -42,8 +43,8 @@ void AlumnosLogica::editarAlumno(Alumno alumno) {
 void AlumnosLogica::obtenerListaDeAlumnos() {
     for(Alumno n : this->listaAlumnos) {
         this->printData(n);
+        std::cout << std::endl;
     }
-    this->updateFile();
 }
 
 void AlumnosLogica::bajaAlumno(int alumnoId) {
@@ -63,15 +64,25 @@ void AlumnosLogica::bajaAlumno(int alumnoId) {
 void AlumnosLogica::updateFile() {
     std::string data = "";
     for(Alumno n : this->listaAlumnos) {
-        data+=n.getCarrera() + "#" +
-        std::to_string(n.getIdAlumno()) + "#" +
-        std::to_string(n.getIdCarrera()) + "\n";
+        data += (n.serializar() + "\n");
     }
     BaseLogic::updateFile(data);
 }
 
-AlumnosLogica::AlumnosLogica() : BaseLogic::BaseLogic(){
+
+
+AlumnosLogica::AlumnosLogica() : BaseLogic::BaseLogic() {
+    std::string line;
     this->fileName = AlumnosLogica::FILE_NAME;
+    std::ifstream data(this->fileName);
+    if(data.is_open()) {
+        while(getline(data, line)) {
+            Alumno alumno;
+            alumno.deserializar(line);
+            this->listaAlumnos.push_back(alumno);
+        }
+    }
+    data.close();
 }
 
 AlumnosLogica::~AlumnosLogica() {
