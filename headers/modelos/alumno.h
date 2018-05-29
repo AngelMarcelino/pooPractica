@@ -3,11 +3,11 @@
 
 #include <string>
 #include "persona.h"
-class Alumno{
+class Alumno: Persona{
 public:
-    static const int CARRERA = 0;
-    static const int ID_ALUMNO = 1;
-    static const int ID_CARRERA = 2;
+    static const int CARRERA = 10; // Debe iniciar en 10 porque los alumnos ya cuentan con propiedades de las personas
+    static const int ID_ALUMNO = 11;
+    static const int ID_CARRERA = 12;
     int getIdAlumno();
     void setIdAlumno(int idAlumno);
 

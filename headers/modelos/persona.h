@@ -5,6 +5,16 @@
 
 class Persona{
 public:
+    static const int NOMBRE = 1;
+    static const int APELLIDO_PATERNO = 2;
+    static const int APELLIDO_MATERNO = 3;
+    static const int DIRECCION = 4;
+    static const int TELEFONO = 5;
+    static const int CIUDAD = 6;
+    static const int ESTADO = 7;
+    static const int ES_HOMBRE = 8;
+    static const int PAIS = 9;
+
     std::string getNombre();
     void setNombre(std::string nombre);
 
@@ -31,7 +41,8 @@ public:
 
     std::string getPais();
     void setPais(std::string pais);
-
+protected:
+    void llenaPropiedad(int counter, std::string data);
 private:
     std::string nombre;
     std::string apellidoPaterno;

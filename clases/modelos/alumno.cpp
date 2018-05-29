@@ -45,6 +45,8 @@ void Alumno::llenaPropiedad(int counter, std::string data) {
         case Alumno::ID_CARRERA:
             this->setIdCarrera(std::stoi(data));
             break;
+        default:
+            Persona::llenaPropiedad(counter, data);
     }
 }
 void auxLlenaProp(Alumno& a,int& dataCounter, std::string* stored) {

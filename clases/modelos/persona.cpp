@@ -63,3 +63,34 @@ void Persona::setPais(std::string pais) {
     this->pais.assign(pais);
 }
 
+void Persona::llenaPropiedad(int counter, std::string data) {
+    switch(counter) {
+        case Persona::NOMBRE:
+            this->setNombre(data);
+            break;
+        case Persona::APELLIDO_PATERNO:
+            this->setApellidoPaterno(data);
+            break;
+        case Persona::APELLIDO_MATERNO:
+            this->setApellidoMaterno(data);
+            break;
+        case Persona::DIRECCION:
+            this->setDireccion(data);
+            break;
+        case Persona::TELEFONO:
+            this->setTelefono(data);
+            break;
+        case Persona::CIUDAD:
+            this->setCiudad(data);
+            break;
+        case Persona::ESTADO:
+            this->setEstado(data);
+            break;
+        case Persona::ES_HOMBRE:
+            this->setEsHombre(data == "true");
+            break;
+        case Persona::PAIS:
+            this->setPais(data);
+            break;
+    }
+}
