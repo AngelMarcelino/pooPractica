@@ -43,6 +43,7 @@ public:
     void setPais(std::string pais);
 protected:
     void llenaPropiedad(int counter, std::string data);
+    std::string serializar();
 private:
     std::string nombre;
     std::string apellidoPaterno;

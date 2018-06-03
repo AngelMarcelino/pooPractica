@@ -94,3 +94,17 @@ void Persona::llenaPropiedad(int counter, std::string data) {
             break;
     }
 }
+
+std::string Persona::serializar() {
+    std::string serialided = "";
+    serialided += this->getNombre() + "#" +
+        this->getApellidoPaterno() + "#" +
+        this->getApellidoMaterno() + "#" +
+        this->getDireccion() + "#" +
+        this->getTelefono() + "#" +
+        this->getCiudad() + "#" +
+        this->getEstado() + "#" +
+        (this->getEsHombre() ? "true" : "false") + "#" +
+        this->getPais();
+    return serialided;
+} 

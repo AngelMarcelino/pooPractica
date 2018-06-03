@@ -3,7 +3,7 @@
 
 #include <string>
 #include "persona.h"
-class Alumno: Persona{
+class Alumno: public Persona{
 public:
     static const int CARRERA = 10; // Debe iniciar en 10 porque los alumnos ya cuentan con propiedades de las personas
     static const int ID_ALUMNO = 11;

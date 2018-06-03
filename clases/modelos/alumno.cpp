@@ -27,7 +27,7 @@ void Alumno::setIdCarrera(int idCarrera){
 }
 
 std::string Alumno::serializar() {
-    std::string serialized = "";
+    std::string serialized = Persona::serializar() + "#";
     serialized+=this->getCarrera() + "#" +
         std::to_string(this->getIdAlumno()) + "#" +
         std::to_string(this->getIdCarrera());
@@ -56,7 +56,7 @@ void auxLlenaProp(Alumno& a,int& dataCounter, std::string* stored) {
 void Alumno::deserializar(std::string linea) {
     Alumno alumno;
     std::string stored = "";
-    int dataCounter = 0;
+    int dataCounter = 1;
     for(int i = 0; i < linea.size(); i++) {
         if(linea[i] == '#' ) {
             auxLlenaProp(*this, dataCounter, &stored);
@@ -68,5 +68,4 @@ void Alumno::deserializar(std::string linea) {
             auxLlenaProp(*this, dataCounter, &stored);
         }
     }
-    
 }

@@ -12,6 +12,8 @@ void AlumnosLogica::agregarAlumno(Alumno alumno) {
 
 void AlumnosLogica::printData(Alumno alumno) {
     std::cout << "Id: " << alumno.getIdAlumno() <<
+        "\tNombre: " << alumno.getNombre() <<
+        "\tApellidos: " << alumno.getApellidoPaterno() << " " << alumno.getApellidoMaterno() <<
         "\tCarrera: " << alumno.getCarrera() << 
         "\tId Carrera: " << alumno.getIdCarrera();
 }
