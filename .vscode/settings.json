@@ -35,6 +35,10 @@
         "xutility": "cpp",
         "list": "cpp",
         "vector": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "xmemory": "cpp",
+        "map": "cpp",
+        "tuple": "cpp",
+        "xtree": "cpp"
     }
 }
