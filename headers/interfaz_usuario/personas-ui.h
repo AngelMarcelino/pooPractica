@@ -14,7 +14,7 @@ public:
 private:
     std::string obtenerCampo(std::string campo);
     EntradaString entradaString;
-    std::list<std::string, std::string> listaCampos;
+    std::list<std::string> listaCampos;
 };
 
 #endif
