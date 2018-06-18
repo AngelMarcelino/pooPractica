@@ -2,7 +2,6 @@
 #define MENU_PR
 
 #include <string>
-#include <list>
 #include <map>
 #include "./alumnos-iu.h"
 

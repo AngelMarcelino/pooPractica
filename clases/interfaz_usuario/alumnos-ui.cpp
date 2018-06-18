@@ -1,5 +1,6 @@
 #include "../../headers/interfaz_usuario/alumnos-iu.h"
 #include "../../headers/interfaz_usuario/entrada/entrada-int.h"
+#include "../../headers/interfaz_usuario/personas-ui.h"
 
 #include <iostream>
 
@@ -37,7 +38,10 @@ void AlumnosIU::seleccionaElemMenu() {
 }
 
 void AlumnosIU::agregarAlumno() {
-    std::cout << "Agregar alumno";
+    std::string result = this->personaUI
+    .obtenerPersonaSerializadaDeUsuario();
+    std::cout << "\n\nResultado: " << result;
+
 }
 
 void AlumnosIU::editarAlumno() {

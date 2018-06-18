@@ -2,6 +2,7 @@
 #define ALUMNOS_IU
 
 #include "./model-interface-base.h"
+#include "./personas-ui.h"
 
 
 class AlumnosIU : public ModelInterfaceBase {
@@ -15,6 +16,7 @@ public:
 private:
     void pintaMenu();
     void seleccionaElemMenu();
+    PersonasUI personaUI;
 };
 
 #endif
