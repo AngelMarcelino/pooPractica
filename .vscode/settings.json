@@ -39,6 +39,11 @@
         "xmemory": "cpp",
         "map": "cpp",
         "tuple": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "functional": "cpp",
+        "memory": "cpp",
+        "unordered_map": "cpp",
+        "xfunctional": "cpp",
+        "xhash": "cpp"
     }
 }

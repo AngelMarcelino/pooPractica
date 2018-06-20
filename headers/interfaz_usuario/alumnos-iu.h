@@ -4,6 +4,7 @@
 #include "./model-interface-base.h"
 #include "./personas-ui.h"
 
+#include <string>
 
 class AlumnosIU : public ModelInterfaceBase {
 
@@ -16,6 +17,7 @@ public:
 private:
     void pintaMenu();
     void seleccionaElemMenu();
+    std::string obtenerAlumnoSerializadoDeUsuario();
     PersonasUI personaUI;
 };
 

@@ -40,8 +40,8 @@ void AlumnosIU::seleccionaElemMenu() {
 void AlumnosIU::agregarAlumno() {
     std::string result = this->personaUI
     .obtenerPersonaSerializadaDeUsuario();
-    std::cout << "\n\nResultado: " << result;
-
+    result += this->obtenerAlumnoSerializadoDeUsuario();
+    std::cout << result;
 }
 
 void AlumnosIU::editarAlumno() {
@@ -51,6 +51,12 @@ void AlumnosIU::editarAlumno() {
 void AlumnosIU::eliminarAlumno() {
     std::cout << "Eliminar alumno";
 }
+
+std::string AlumnosIU::obtenerAlumnoSerializadoDeUsuario() {
+    return "";
+}
+
+
 
 AlumnosIU::AlumnosIU(){
     this->entradasMenu = {
